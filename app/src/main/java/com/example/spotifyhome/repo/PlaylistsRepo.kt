@@ -16,9 +16,9 @@ class PlaylistsRepo : IPlaylistsRepo {
     }
 
     init {
-        playlistMock.add(PlaylistData(name = "Today's Top Hits", img = R.drawable.cinta))
-        playlistMock.add(PlaylistData(name = "Canciones que te gustan", img = R.drawable.cinta))
-        playlistMock.add(PlaylistData(name = "Pop", img = R.drawable.cinta))
+        playlistMock.add(PlaylistData(name = "Playlist 1", img = R.drawable.playlist1))
+        playlistMock.add(PlaylistData(name = "Playlist 2", img = R.drawable.playlist2))
+        playlistMock.add(PlaylistData(name = "Playlist 3", img = R.drawable.playlist3))
     }
 
 

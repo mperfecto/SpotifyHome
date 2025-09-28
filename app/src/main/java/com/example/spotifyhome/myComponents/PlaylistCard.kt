@@ -27,7 +27,7 @@ import androidx.compose.ui.unit.sp
 fun PlaylistCard(texto: String, img: Int, modifier: Modifier = Modifier) {
     Box(
         modifier = Modifier
-            .background(Color.DarkGray, shape = RoundedCornerShape(percent = 10))
+            .background(Color.DarkGray, shape = RoundedCornerShape(percent = 7))
     ) {
         Row(
             modifier = Modifier
