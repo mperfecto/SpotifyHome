@@ -27,34 +27,38 @@ fun PlaylistForYou(playlist: PlaylistData, modifier: Modifier = Modifier) {
 
     Box(
         modifier = modifier
-            .width(100.dp)
-            .height(160.dp)
-            .background(MaterialTheme.colorScheme.background)
+            .width(200.dp)
+            .height(320.dp)
+            .padding(8.dp)
     ) {
         Column(
-            horizontalAlignment = Alignment.Start
+            horizontalAlignment = Alignment.Start,
+            modifier = Modifier
+
         ) {
             Image(
                 painter = painterResource(id = playlist.img),
                 modifier = Modifier
-                    .size(100.dp),
-                contentDescription = playlist.name
+                    .size(184.dp),
+                contentDescription = playlist.name,
+                alignment = Alignment.TopStart
             )
 
             Text(
                 text = playlist.name,
                 color = MaterialTheme.colorScheme.onSurface,
                 fontWeight = FontWeight.Bold,
-                fontSize = 9.sp,
+                fontSize = 18.sp,
                 modifier = Modifier
+                    .padding(top = 10.dp, bottom = 10.dp)
             )
 
             Text(
                 text = playlist.description,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                 fontWeight = FontWeight.Bold,
-                fontSize = 8.sp,
-                lineHeight = 12.sp,
+                fontSize = 16.sp,
+                lineHeight = 27.sp,
                 modifier = Modifier
             )
         }

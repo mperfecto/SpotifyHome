@@ -15,20 +15,18 @@ import com.example.spotifyhome.R
 class PlaylistData(val name: String, val img: Int, val description: String)
 
 @Composable
-fun RecentlyPlayedGrid(playlists: List<PlaylistData>) {
+fun RecentlyPlayedGrid(playlists: List<PlaylistData>, modifier: Modifier = Modifier) {
 
     Box(modifier = Modifier
-        .padding(8.dp)
-        .fillMaxWidth()) {
+        .padding(start = 8.dp, top = 8.dp, bottom = 8.dp, end = 24.dp)
+        ) {
         Column(
-            modifier = Modifier
-                .fillMaxWidth(),
+            modifier = Modifier,
             verticalArrangement = Arrangement.spacedBy(7.dp)
         ) {
             for (i in playlists.indices step 2) {
                 Row(
-                    modifier = Modifier
-                        .fillMaxWidth(),
+                    modifier = Modifier,
                     horizontalArrangement = Arrangement.spacedBy(6.dp)
                 ) {
 

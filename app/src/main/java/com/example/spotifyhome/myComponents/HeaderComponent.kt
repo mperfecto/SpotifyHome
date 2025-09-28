@@ -22,7 +22,7 @@ fun Header(text: String) {
     Box(modifier = Modifier
         .fillMaxWidth()
         .background(Color.Transparent)
-        .padding(8.dp),
+        .padding(start = 8.dp, top = 8.dp, bottom = 8.dp, end = 24.dp),
         contentAlignment = Alignment.CenterStart
     ) {
         Text(

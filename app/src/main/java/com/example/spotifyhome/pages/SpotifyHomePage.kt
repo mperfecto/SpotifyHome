@@ -16,6 +16,7 @@ import androidx.compose.ui.unit.dp
 import com.example.spotifyhome.R
 import com.example.spotifyhome.viewModel.MainActivityVM
 import com.example.spotifyhome.myComponents.Header
+import com.example.spotifyhome.myComponents.MadeForYouCarousel
 import com.example.spotifyhome.myComponents.PlaylistData
 import com.example.spotifyhome.myComponents.RecentlyPlayedGrid
 import com.example.spotifyhome.ui.theme.SpotifyHomeTheme
@@ -27,20 +28,19 @@ fun SpotifyHome(vm: MainActivityVM) {
 
     Column(
         modifier = Modifier
-            .padding(16.dp)
+            .padding(start = 16.dp, top = 16.dp, bottom = 16.dp)
             .fillMaxWidth()
             .fillMaxHeight()
     ) {
         Header(stringResource(id = R.string.good_morning))
-        RecentlyPlayedGrid(playlists = playlistsState)
+        RecentlyPlayedGrid(playlists = playlistsState, modifier = Modifier.padding(end = 16.dp))
 
         Spacer(modifier = Modifier.size(15.dp))
 
         Header(stringResource(id = R.string.made_for_you))
-
-
+        MadeForYouCarousel(playlists = playlistsState,
+            modifier = Modifier.fillMaxWidth())
     }
-
 }
 
 
