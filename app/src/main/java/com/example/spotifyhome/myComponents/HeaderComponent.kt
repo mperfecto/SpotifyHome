@@ -9,22 +9,26 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.spotifyhome.R
 
 @Composable
-fun Greeting() {
+fun Header(text: String) {
 
     Box(modifier = Modifier
         .fillMaxWidth()
         .background(Color.Transparent)
-        .padding(10.dp),
+        .padding(8.dp),
         contentAlignment = Alignment.CenterStart
     ) {
         Text(
-            text = "Good Morning!",
+            text = text,
             color = Color.White,
+            fontWeight = FontWeight.Bold,
             fontSize = 20.sp)
     }
 
@@ -33,5 +37,5 @@ fun Greeting() {
 @Preview
 @Composable
 fun GreetingPreview() {
-    Greeting()
+    Header(stringResource(id = R.string.good_morning))
 }

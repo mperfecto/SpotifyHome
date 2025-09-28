@@ -4,6 +4,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -11,25 +12,28 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.spotifyhome.R
 
-class PlaylistData(var name: String, var img: Int)
+class PlaylistData(val name: String, val img: Int, val description: String)
 
 @Composable
 fun RecentlyPlayedGrid(playlists: List<PlaylistData>) {
 
-    Box(modifier = Modifier.padding(8.dp)) {
+    Box(modifier = Modifier
+        .padding(8.dp)
+        .fillMaxWidth()) {
         Column(
-            modifier = Modifier,
+            modifier = Modifier
+                .fillMaxWidth(),
             verticalArrangement = Arrangement.spacedBy(7.dp)
         ) {
             for (i in playlists.indices step 2) {
                 Row(
-                    modifier = Modifier,
+                    modifier = Modifier
+                        .fillMaxWidth(),
                     horizontalArrangement = Arrangement.spacedBy(6.dp)
                 ) {
 
                     PlaylistCard(
-                        texto = playlists[i].name,
-                        img = playlists[i].img,
+                        playlist = playlists[i],
                         modifier = Modifier.weight(1f)
                     )
 
@@ -38,7 +42,8 @@ fun RecentlyPlayedGrid(playlists: List<PlaylistData>) {
                     if (i + 1 < playlists.size) {
 
                         PlaylistCard(
-                            texto = playlists[i + 1].name, img = playlists[i + 1].img
+                            playlist = playlists[i + 1],
+                            modifier = Modifier.weight(1f)
                         )
                     }
                 }
@@ -51,9 +56,10 @@ fun RecentlyPlayedGrid(playlists: List<PlaylistData>) {
 @Preview
 @Composable
 fun RecentlyPlayedPreview() {
+
     val playlists = ArrayList<PlaylistData>()
 
-    playlists.add(PlaylistData(name = "Playlist 1", img = R.drawable.playlist1))
+    playlists.add(PlaylistData(name = "Canciones que te gustan", img = R.drawable.playlist1))
     playlists.add(PlaylistData(name = "Playlist 2", img = R.drawable.playlist2))
     playlists.add(PlaylistData(name = "Playlist 3", img = R.drawable.playlist3))
     playlists.add(PlaylistData(name = "Playlist 4", img = R.drawable.playlist4))

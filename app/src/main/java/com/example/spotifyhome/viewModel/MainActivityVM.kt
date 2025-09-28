@@ -6,7 +6,7 @@ import com.example.spotifyhome.myComponents.PlaylistData
 import com.example.spotifyhome.repo.IPlaylistsRepo
 import com.example.spotifyhome.repo.PlaylistsRepo
 
-class MainActivityVM: ViewModel() {
+open class MainActivityVM: ViewModel() {
 
     val playlists: MutableLiveData<List<PlaylistData>> = MutableLiveData()
     val repo: IPlaylistsRepo = PlaylistsRepo()
@@ -14,5 +14,7 @@ class MainActivityVM: ViewModel() {
     fun getAllPlaylists() {
         playlists.postValue(repo.getPlaylists())
     }
+
+
 
 }

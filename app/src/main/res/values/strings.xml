@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">SpotifyHome</string>
+    <string name="good_morning">Good Morning!</string>
+    <string name="recently_played">Recently played</string>
+    <string name="made_for_you">Made For You</string>
+    <string name="popular_playlists">Popular playlists</string>
+    <string-array name="playlists">
+        <item>Playlist 0</item>
+        <item>Playlist 2</item>
+        <item>Playlist 3</item>
+    </string-array>
 </resources>
