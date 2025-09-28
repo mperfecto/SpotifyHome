@@ -51,14 +51,14 @@ fun SpotifyHomePreview() {
     val fakeVM = object : MainActivityVM() {
         init {
             playlists.value = listOf(
-                (PlaylistData(name = "Playlist 1", img = R.drawable.playlist1)),
-                (PlaylistData(name = "Playlist 2", img = R.drawable.playlist2)),
-                (PlaylistData(name = "Playlist 3", img = R.drawable.playlist3)),
-                (PlaylistData(name = "Playlist 4", img = R.drawable.playlist4)),
-                (PlaylistData(name = "Playlist 5", img = R.drawable.playlist5)),
-                (PlaylistData(name = "Playlist 6", img = R.drawable.playlist6)),
-                (PlaylistData(name = "Playlist 7", img = R.drawable.playlist7)),
-                (PlaylistData(name = "Playlist 8", img = R.drawable.playlist8))
+                (PlaylistData(name = "Playlist 1", img = R.drawable.playlist1, description = "Playlist de canciones que te gustan")),
+                (PlaylistData(name = "Playlist 2", img = R.drawable.playlist2, description = "Playlist de canciones que te gustan")),
+                (PlaylistData(name = "Playlist 3", img = R.drawable.playlist3, description = "Playlist de canciones que te gustan")),
+                (PlaylistData(name = "Playlist 4", img = R.drawable.playlist4, description = "Playlist de canciones que te gustan")),
+                (PlaylistData(name = "Playlist 5", img = R.drawable.playlist5, description = "Playlist de canciones que te gustan")),
+                (PlaylistData(name = "Playlist 6", img = R.drawable.playlist6, description = "Playlist de canciones que te gustan")),
+                (PlaylistData(name = "Playlist 7", img = R.drawable.playlist7, description = "Playlist de canciones que te gustan")),
+                (PlaylistData(name = "Playlist 8", img = R.drawable.playlist8, description = "Playlist de canciones que te gustan"))
             )
         }
     }

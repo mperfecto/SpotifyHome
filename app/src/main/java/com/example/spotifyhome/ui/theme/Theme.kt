@@ -19,7 +19,8 @@ private val SpotifyColorScheme = darkColorScheme(
     onPrimary = SpotifyBlack,
     onSecondary = SpotifyWhite,
     onBackground = SpotifyWhite,
-    onSurface = SpotifyWhite
+    onSurface = SpotifyWhite,
+    onSurfaceVariant = SpotifyLightGray
 )
 
 @Composable

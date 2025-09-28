@@ -6,4 +6,5 @@ interface IPlaylistsRepo {
 
     fun addPlaylist(playlist: PlaylistData): PlaylistData
     fun getPlaylists(): List<PlaylistData>
+
 }

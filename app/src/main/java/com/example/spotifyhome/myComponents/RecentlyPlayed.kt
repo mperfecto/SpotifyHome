@@ -59,14 +59,14 @@ fun RecentlyPlayedPreview() {
 
     val playlists = ArrayList<PlaylistData>()
 
-    playlists.add(PlaylistData(name = "Canciones que te gustan", img = R.drawable.playlist1))
-    playlists.add(PlaylistData(name = "Playlist 2", img = R.drawable.playlist2))
-    playlists.add(PlaylistData(name = "Playlist 3", img = R.drawable.playlist3))
-    playlists.add(PlaylistData(name = "Playlist 4", img = R.drawable.playlist4))
-    playlists.add(PlaylistData(name = "Playlist 5", img = R.drawable.playlist5))
-    playlists.add(PlaylistData(name = "Playlist 6", img = R.drawable.playlist6))
-    playlists.add(PlaylistData(name = "Playlist 7", img = R.drawable.playlist7))
-    playlists.add(PlaylistData(name = "Playlist 8", img = R.drawable.playlist8))
+    playlists.add(PlaylistData(name = "Canciones que te gustan", img = R.drawable.playlist1, description = "Playlist de canciones que te gustan"))
+    playlists.add(PlaylistData(name = "Playlist 2", img = R.drawable.playlist2, description = "Playlist de canciones que te gustan"))
+    playlists.add(PlaylistData(name = "Playlist 3", img = R.drawable.playlist3, description = "Playlist de canciones que te gustan"))
+    playlists.add(PlaylistData(name = "Playlist 4", img = R.drawable.playlist4, description = "Playlist de canciones que te gustan"))
+    playlists.add(PlaylistData(name = "Playlist 5", img = R.drawable.playlist5, description = "Playlist de canciones que te gustan"))
+    playlists.add(PlaylistData(name = "Playlist 6", img = R.drawable.playlist6, description = "Playlist de canciones que te gustan"))
+    playlists.add(PlaylistData(name = "Playlist 7", img = R.drawable.playlist7, description = "Playlist de canciones que te gustan"))
+    playlists.add(PlaylistData(name = "Playlist 8", img = R.drawable.playlist8, description = "Playlist de canciones que te gustan"))
 
     RecentlyPlayedGrid(playlists)
 }
